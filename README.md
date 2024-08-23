@@ -78,6 +78,74 @@ Ecosystem:
 
 Python’s rich ecosystem of packages, such as NumPy, Pandas, and Matplotlib, is used to handle data, perform numerical computations, and visualize results.
 
+# Installation
+
+1.Clone the Repository
+
+git clone https://github.com/angadkumar9128/ADVANCED-OBJECT-DETECTION-SYSTEM-Using-YOLOv3_and_OpenCV.git
+
+cd ADVANCED-OBJECT-DETECTION-SYSTEM-Using-YOLOv3_and_OpenCV
+
+2. Install Dependencies :
+    Ensure you have Python installed. Then, install the required Python packages:
+
+ pip install -r requirements.txt
+ 
+3. Download YOLOv3 Weights :
+    Download the pre-trained YOLOv3 weights from the official YOLO website or from this link and place it in the data/ directory.
+
+# Usage
+
+1. Running Object Detection on Images
+
+python src/object_detection.py --image images/input.jpg --output images/output.jpg
+
+This command will detect objects in the input image and save the output with detected objects.
+
+2. Running Object Detection on Video
+
+python src/object_detection.py --video path_to_video.mp4 --output output_video.mp4
+
+The system will process the video and detect objects frame by frame.
+
+3. Adjusting Parameters :
+   
+   You can adjust the detection parameters (like confidence threshold and non-max suppression threshold) within the object_detection.py script.
+
+# Examples
+
+Input Image:
+
+Output Image with Detected Objects:
+
+# Project Structure
+
+├── cfg/
+
+│   ├── yolov3.cfg           # YOLOv3 model configuration file
+
+├── data/
+
+│   ├── coco.names           # COCO dataset class names
+
+│   ├── yolov3.weights       # Pre-trained YOLOv3 weights
+
+├── images/
+
+│   ├── input.jpg            # Example input image
+
+│   ├── output.jpg           # Example output image after detection
+
+├── src/
+
+│   ├── object_detection.py  # Main script for object detection
+
+│   ├── utils.py             # Utility functions
+
+├── README.md                # Project documentation
+
+└── requirements.txt         # Required dependencies
+
 # Applications:
 
 # 1. Surveillance Systems:
@@ -129,6 +197,22 @@ Environmental Research:
 
 Use the system to automatically detect and classify species in remote video feeds, providing valuable data for ecological studies.
 
-# Getting Started:
+# Customization
 
-The repository includes detailed instructions for setting up the environment, training the model, and deploying the object detection system.
+Model Customization: You can train YOLOv3 on custom datasets by modifying the configuration files in the cfg/ directory.
+
+Thresholds: Adjust the confidence and non-max suppression thresholds in the script to fine-tune detection accuracy.
+
+# Contributing
+
+Contributions are welcome! If you have any suggestions, feel free to open an issue or submit a pull request.
+
+# License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+# Acknowledgments
+
+YOLOv3: The YOLO algorithm was originally developed by Joseph Redmon and Ali Farhadi.
+OpenCV: OpenCV is an open-source computer vision library that simplifies image and video processing tasks.
+
